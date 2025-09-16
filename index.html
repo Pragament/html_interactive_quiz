@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Quiz Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Classroom Quiz Viewer</h1>
+        </header>
+        
+        <div class="teacher-controls">
+            <div class="control-group">
+                <label for="topic">Quiz Topic:</label>
+                <input type="text" id="topic" placeholder="Enter topic (e.g., photosynthesis)">
+            </div>
+            
+            <div class="control-group">
+                <label for="student-count">Number of Students:</label>
+                <select id="student-count">
+                    <option value="1">1 Student</option>
+                    <option value="2">2 Students</option>
+                    <option value="3">3 Students</option>
+                    <option value="4" selected>4 Students</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <button id="generate-btn">Generate Quiz</button>
+                <button id="random-btn">Select Random Student</button>
+                <button id="reset-btn">Reset Quiz</button>
+            </div>
+            
+            <div id="random-number" class="random-number"></div>
+        </div>
+        
+        <div id="students-container" class="students-container split-4">
+            <!-- Student views will be generated here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
